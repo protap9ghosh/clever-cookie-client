@@ -1,18 +1,17 @@
 import React from 'react';
-import { Button, Container, Form, Nav, NavDropdown, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 
-const Header = () => {
+const NavigationBar = () => {
     return (
         <div>
             <Navbar bg="light" expand="lg">
-                <Container fluid>
+                <Container>
                     <Navbar.Brand href="#">Clever Cookie</Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
-                            className="me-auto my-2 my-lg-0"
+                            className="ms-auto me-2 my-2 my-lg-0"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
@@ -20,7 +19,8 @@ const Header = () => {
                             <Nav.Link href="#action2">Blog</Nav.Link>
                             <Nav.Link href="#">Link</Nav.Link>
                         </Nav>
-                        <Button variant="outline-success">Search</Button>
+                        <img className='rounded-circle' style={{ width: 50, height: 50 }} src="https://rb.gy/izb1j" alt="" />
+                        <Button className='ms-3' variant="outline-success">LogIn</Button>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
@@ -28,4 +28,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default NavigationBar;
