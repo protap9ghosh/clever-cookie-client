@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const AuthProvider = () => {
+const Header = () => {
     return (
         <div>
             
@@ -8,4 +9,4 @@ const AuthProvider = () => {
     );
 };
 
-export default AuthProvider;
+export default Header;
