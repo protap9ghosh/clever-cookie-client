@@ -25,7 +25,7 @@ const NavigationBar = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <Link to="/" className="btn btn-ghost normal-case text-3xl">Clever Cookie</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-semibold">
@@ -40,7 +40,9 @@ const NavigationBar = () => {
                             <img src="https://rb.gy/izb1j" />
                         </div>
                     </div>
-                    <a className="btn">LogIn</a>
+                    <Link to="/login">
+                        <button className='btn'>LogIn</button>
+                    </Link>
                 </div>
             </div>
         </div>
