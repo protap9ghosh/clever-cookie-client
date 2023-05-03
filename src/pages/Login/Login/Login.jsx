@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavigationBar from '../../../Shared/NavigationBar/NavigationBar';
+import Footer from '../../../Shared/Footer/Footer';
 
 const Login = () => {
     return (
         <div>
+            <NavigationBar></NavigationBar>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                     </div>
-                    <div className="card flex-shrink-0 w-screen max-w-sm mt-5 shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 lg:w-screen max-w-sm mt-5 shadow-2xl bg-base-100">
                         <form className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -42,6 +45,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

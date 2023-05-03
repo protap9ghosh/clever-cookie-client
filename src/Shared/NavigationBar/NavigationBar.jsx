@@ -25,12 +25,12 @@ const NavigationBar = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <Link to="/" className="btn btn-ghost normal-case text-3xl">Clever Cookie</Link>
+                    <Link to="/" className="btn btn-ghost normal-case sm:text-3xl lg:text-3xl">Clever Cookie</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-semibold">
-                        <Link>Home</Link>
-                        <Link className='ml-7'>Blog</Link>
+                        <Link to="/">Home</Link>
+                        <Link to="/blog" className='ml-7'>Blog</Link>
                     </ul>
                 </div>
                 

@@ -13,7 +13,6 @@ const LoginLayout = () => {
             <NavigationBar></NavigationBar>
             <Header></Header>
             <Chef></Chef>
-            <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );
