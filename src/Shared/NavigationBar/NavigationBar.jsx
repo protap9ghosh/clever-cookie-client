@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NavigationBar = () => {
     return (
         <div>
-            <div className="navbar bg-slate-100">
+            <div className="navbar bg-slate-200">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,7 +30,9 @@ const NavigationBar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-semibold">
                         <Link to="/">Home</Link>
-                        <Link to="/blog" className='ml-7'>Blog</Link>
+                        <Link to="/blog" className='mx-7'>Blog</Link>
+                        <Link to="/" className='mr-7'>About</Link>
+                        <Link to="/">Contact</Link>
                     </ul>
                 </div>
                 
