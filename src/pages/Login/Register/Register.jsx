@@ -1,9 +1,38 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavigationBar from '../../../Shared/NavigationBar/NavigationBar';
 import Footer from '../../../Shared/Footer/Footer';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Register = () => {
+    const { registerUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
+
+    const handleRegister = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, photo, email, password);
+
+        if (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
+            setError('invalid password, least one letter and one number');
+            return;
+        }
+
+        registerUser()
+            .then(result => {
+            console.log(result.user);
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+
+
+
     return (
         <div>
             <NavigationBar></NavigationBar>
@@ -13,7 +42,7 @@ const Register = () => {
                         <h1 className="text-5xl font-bold">Please register!</h1>
                     </div>
                     <div className="card flex-shrink-0 lg:w-screen max-w-sm mt-5 shadow-2xl bg-base-100">
-                        <form className="card-body">
+                        <form onSubmit={handleRegister} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -40,6 +69,9 @@ const Register = () => {
                                 <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                                 <label className="label">
                                     <Link to="/login" className="label-text-alt link link-hover">Already have an account?</Link>
+                                </label>
+                                <label className="label">
+                                    <small>{error}</small>
                                 </label>
                             </div>
 
