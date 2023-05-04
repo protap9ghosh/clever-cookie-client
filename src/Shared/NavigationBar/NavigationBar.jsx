@@ -32,7 +32,7 @@ const NavigationBar = () => {
                         <Link to="/">Home</Link>
                         <Link to="/blog" className='mx-7'>Blog</Link>
                         <Link to="/" className='mr-7'>About</Link>
-                        <Link to="/">Contact</Link>
+                        <Link to="/register">Contact</Link>
                     </ul>
                 </div>
                 
