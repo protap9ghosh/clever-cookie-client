@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { GetContext } from '../../../providers/AuthProvider';
 
 const NavigationBar = () => {
+    const { users } = useContext(GetContext);
     return (
         <div>
             <div className="navbar bg-slate-200">
@@ -31,20 +33,23 @@ const NavigationBar = () => {
                     <ul className="menu menu-horizontal px-1 font-semibold">
                         <Link to="/">Home</Link>
                         <Link to="/blog" className='mx-7'>Blog</Link>
-                        <Link to="/" className='mr-7'>About</Link>
-                        <Link to="/register">Contact</Link>
                     </ul>
                 </div>
                 
                 <div className="navbar-end">
-                    <div className="avatar">
-                        <div className="w-14 me-5 rounded-full">
-                            <img src="https://rb.gy/izb1j" />
-                        </div>
-                    </div>
-                    <Link to="/login">
-                        <button className='btn'>LogIn</button>
-                    </Link>
+                    {users &&
+                        <div className="avatar tooltip tooltip-left" data-tip="User Name">
+                            <div className="w-14 me-5 rounded-full ">
+                                <img src="https://rb.gy/sv11r" />
+                            </div>
+                        </div>}
+
+                    {users ?
+                        <button className='btn'>Log Out</button> :
+                        <Link to="/login">
+                            <button className='btn'>Log In</button>
+                        </Link>
+                    }
                 </div>
             </div>
         </div>

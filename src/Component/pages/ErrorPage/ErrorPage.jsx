@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavigationBar from '../../Shared/NavigationBar/NavigationBar';
+import NavigationBar from '../../../Component/pages/ErrorPage/ErrorPage';
 import { FaArrowLeft } from 'react-icons/fa';
 
 const ErrorPage = () => {
@@ -14,7 +14,7 @@ const ErrorPage = () => {
                         <p className='text-2xl font-semibold'>We can&apos;t find that page</p>
                         <p className='w-96 mx-auto pt-2 pb-6'>We&apos;pe fairly sure that page used to be here but seems to have go missing. We do apologise on it&apos;s behalf.</p>
                         <Link to="/">
-                            <button className="btn btn-outline btn-info"> <FaArrowLeft className='mr-2'/> Back to Home</button>
+                            <button className="btn btn-outline btn-info"> <FaArrowLeft className='mr-2'/> Back To Home</button>
                         </Link>
                     </div>
                 </div>

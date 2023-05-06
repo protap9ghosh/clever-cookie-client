@@ -1,37 +1,64 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
-import Login from "../pages/Login/Login/Login";
+import Home from "../Component/Section/Home/Home";
+import Blog from "../Component/pages/Blog/Blog";
 import LoginLayout from "../layouts/LoginLayout";
-import Blog from "../pages/Blog/Blog";
-import Register from "../pages/Login/Register/Register";
-import Chef from "../pages/chef-details/Chef-view/Chef";
-import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Login from "../Component/pages/Login/Login";
+import Register from "../Component/pages/Register/Register";
+import Chef from "../layouts/Chef";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <LoginLayout></LoginLayout>,
-    },
-    {
-        path: '/chef',
         element: <Main></Main>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>
+            },
+            {
+                path: "/blog",
+                element: <Blog></Blog>
+            }
+        ]
     },
     {
-        path: '/login',
-        element: <Login></Login>,
+        path: '/',
+        element: <LoginLayout></LoginLayout>,
+        children: [
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
+            }
+        ]
     },
     {
-        path: '/register',
-        element: <Register></Register>,
-    },
-    {
-        path: '/blog',
-        element: <Blog></Blog>,
-    },
-    {
-        path: '*',
-        element: <ErrorPage></ErrorPage>,
+        path: '/',
+        element: <Chef></Chef>,
+        children: [
+            {
+                path: '/',
+                element: <Chef></Chef>,
+            }
+        ],
     }
+    //  {
+    //     path: '/',
+    //     element: <Chef_bio></Chef_bio>,
+    //     children: [
+    //         {
+    //             path: '/',
+    //             element: <Chef_bio></Chef_bio>,
+    //             loader: ({ params }) => fetch(`  /${params.id}`);
+    //         },
+
+    //     ]
+    //  }
+
 ]);
 
 export default router;

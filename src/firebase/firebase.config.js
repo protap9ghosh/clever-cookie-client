@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDStdMv0Rzp-eUBUES_ljTP7UwDs4I1aes",
-  authDomain: "clever-cookie-c7dd6.firebaseapp.com",
-  projectId: "clever-cookie-c7dd6",
-  storageBucket: "clever-cookie-c7dd6.appspot.com",
-  messagingSenderId: "163150764339",
-  appId: "1:163150764339:web:08782538a598b8a8934646"
+    apiKey: "AIzaSyDStdMv0Rzp-eUBUES_ljTP7UwDs4I1aes",
+    authDomain: "clever-cookie-c7dd6.firebaseapp.com",
+    projectId: "clever-cookie-c7dd6",
+    storageBucket: "clever-cookie-c7dd6.appspot.com",
+    messagingSenderId: "163150764339",
+    appId: "1:163150764339:web:08782538a598b8a8934646",
 };
 
 // Initialize Firebase

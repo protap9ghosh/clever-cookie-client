@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import NavigationBar from '../../../Shared/NavigationBar/NavigationBar';
-import Footer from '../../../Shared/Footer/Footer';
-import { AuthContext } from '../../../providers/AuthProvider';
+import { Link, useNavigate } from 'react-router-dom';
+import Footer from '../../../Component/Section/Footer/Footer';
+import { GetContext } from '../../../providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
-    const { registerUser } = useContext(AuthContext);
+    const navigates = useNavigate();
+    const { registerUser } = useContext(GetContext);
     const [error, setError] = useState('');
 
     const handleRegister = (event) => {
@@ -22,12 +23,27 @@ const Register = () => {
             return;
         }
 
-        registerUser()
+        registerUser(email, password)
             .then(result => {
-            console.log(result.user);
+                console.log(result.user);
+                upgradeProfiles(result.user, name, photo)
+                navigates("/login");
             })
             .catch(error => {
-                console.log(error.message);
+                setError(error.message);
+            })
+    }
+
+    const upgradeProfiles = (info, name, photo) => {
+        updateProfile(info, {
+            displayName: name,
+            photoURL: photo
+        })
+            .then(() => {
+                console.log("Registers Successful")
+            })
+            .catch(error => {
+                setError(error.message);
             })
     }
 
@@ -35,7 +51,6 @@ const Register = () => {
 
     return (
         <div>
-            <NavigationBar></NavigationBar>
             <div className="hero min-h-screen bg-indigo-50">
                 <div className="hero-content flex-col">
                     <div className="text-center">
@@ -74,6 +89,8 @@ const Register = () => {
                                     <small>{error}</small>
                                 </label>
                             </div>
+
+                            <p className='text-[15px] text-red-800 font-semibold text-center'>{error}</p>
 
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register Now</button>
