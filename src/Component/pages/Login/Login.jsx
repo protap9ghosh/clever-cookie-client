@@ -68,8 +68,8 @@ const Login = () => {
                             <small className="ml-9 mt-1 mb-5">
                                 <span>
                                     Continue With
-                                    <Link className="label-text-alt link link-hover ml-1 text-sm text-blue-500">Google</Link> &
-                                    <Link className="label-text-alt link link-hover ml-1 text-sm text-blue-500">Github</Link>
+                                    <Link onClick={googleSign} className="label-text-alt link link-hover ml-1 text-sm text-blue-500">Google</Link> &
+                                    <Link onClick={githubSign} className="label-text-alt link link-hover ml-1 text-sm text-blue-500">Github</Link>
                                 </span>
                             </small>
                         </form>
