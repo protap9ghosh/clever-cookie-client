@@ -25,7 +25,7 @@ const Register = () => {
 
         registerUser(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 upgradeProfiles(result.user, name, photo)
                 navigates("/login");
             })
@@ -85,12 +85,10 @@ const Register = () => {
                                 <label className="label">
                                     <Link to="/login" className="label-text-alt link link-hover">Already have an account?</Link>
                                 </label>
-                                <label className="label">
+                                <label className="label text-red-600">
                                     <small>{error}</small>
                                 </label>
                             </div>
-
-                            <p className='text-[15px] text-red-800 font-semibold text-center'>{error}</p>
 
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register Now</button>

@@ -5,7 +5,7 @@ const Blog = () => {
     return (
         <div>
             <div>
-                <div className='min-h-screen'>
+                <div className='min-h-screen pb-10'>
                     <span className='flex justify-center'>
                         <button className="btn btn-outline font-bold my-8">Download PDF</button>
                     </span>

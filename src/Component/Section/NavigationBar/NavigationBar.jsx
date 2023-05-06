@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import { GetContext } from '../../../providers/AuthProvider';
 
 const NavigationBar = () => {
-    const { users } = useContext(GetContext);
+    const { users, userLogOut } = useContext(GetContext);
+
+    const handleLogOut = () => {
+        userLogOut()
+            .then()
+            .catch(() => console.log(error));
+    }
+
     return (
         <div>
             <div className="navbar bg-slate-200">
@@ -35,17 +42,17 @@ const NavigationBar = () => {
                         <Link to="/blog" className='mx-7'>Blog</Link>
                     </ul>
                 </div>
-                
+
                 <div className="navbar-end">
                     {users &&
-                        <div className="avatar tooltip tooltip-left" data-tip="User Name">
+                        <div className="avatar tooltip tooltip-left" data-tip={users?.displayName}>
                             <div className="w-14 me-5 rounded-full ">
-                                <img src="https://rb.gy/sv11r" />
+                                <img src={users?.photoURL} />
                             </div>
                         </div>}
 
                     {users ?
-                        <button className='btn'>Log Out</button> :
+                        <button onClick={handleLogOut} className='btn'>Log Out</button> :
                         <Link to="/login">
                             <button className='btn'>Log In</button>
                         </Link>
