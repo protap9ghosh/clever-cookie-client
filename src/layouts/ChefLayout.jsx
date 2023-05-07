@@ -3,7 +3,7 @@ import NavigationBar from '../Component/Section/NavigationBar/NavigationBar';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Component/Section/Footer/Footer';
 
-const Chef_bio = () => {
+const ChefLayout = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
@@ -13,4 +13,4 @@ const Chef_bio = () => {
     );
 };
 
-export default Chef_bio;
+export default ChefLayout;

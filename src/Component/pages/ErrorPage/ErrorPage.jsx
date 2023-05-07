@@ -8,7 +8,7 @@ const ErrorPage = () => {
         <div>
             <div className="hero min-h-screen bg-indigo-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={notFound} className="max-w-lg rounded-lg shadow-2xl" />
+                    <img src={notFound} className="lg:max-w-lg rounded-lg shadow-2xl" />
                     <div className='mr-10'>
                         <h1 className="text-5xl font-bold">Oops, page not found</h1>
                         <p className="py-6">Sorry, the page you are looking for could not be found</p>

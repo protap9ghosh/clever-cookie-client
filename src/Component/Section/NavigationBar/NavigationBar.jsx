@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { GetContext } from '../../../providers/AuthProvider';
+import logo from '../../../assets/chef-logo.png'
 
 const NavigationBar = () => {
     const { users, userLogOut } = useContext(GetContext);
@@ -34,13 +35,21 @@ const NavigationBar = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <Link to="/" className="btn btn-ghost normal-case sm:text-3xl lg:text-3xl">Clever Cookie</Link>
+
+                    <div className='flex items-center h-0'>
+                        <img className='w-20' src={logo} alt="" />
+                        <Link to="/" className="font-bold normal-case sm:text-3xl lg:text-3xl">Clever Cookie</Link>
+                    </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-semibold">
-                        <Link to="/">Home</Link>
-                        <Link to="/blog" className='mx-7'>Blog</Link>
-                    </ul>
+
+                <div className="navbar-center hidden lg:flex text-[17px]">
+                    <NavLink to="/" className='mr-5' style={({ isActive, isPending }) => {
+                        return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#219ebc", };
+                    }}> Home </NavLink>
+
+                    <NavLink to="/blog" style={({ isActive, isPending }) => {
+                        return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#219ebc", };
+                    }}> Blog </NavLink>
                 </div>
 
                 <div className="navbar-end">

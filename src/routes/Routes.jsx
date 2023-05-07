@@ -5,7 +5,6 @@ import Blog from "../Component/pages/Blog/Blog";
 import LoginLayout from "../layouts/LoginLayout";
 import Login from "../Component/pages/Login/Login";
 import Register from "../Component/pages/Register/Register";
-import Chef from "../layouts/Chef";
 import ErrorPage from "../Component/pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
@@ -41,29 +40,22 @@ const router = createBrowserRouter([
             }
         ]
     },
-    {
-        path: '/',
-        element: <Chef></Chef>,
-        children: [
-            {
-                path: '/',
-                element: <Chef></Chef>,
-            }
-        ],
-    },
-    //  {
+
+
+    // {
     //     path: '/',
-    //     element: <Chef_bio></Chef_bio>,
+    //     element: <ChefDetails></ChefDetails>,
     //     children: [
     //         {
     //             path: '/',
-    //             element: <Chef_bio></Chef_bio>,
-    //             loader: ({ params }) => fetch(`  /${params.id}`);
+    //             element: <ChefDetails></ChefDetails>,
+    //             loader: ({ params }) => fetch(`http://localhost:5000/chef-details/${params.id}`),
     //         },
 
     //     ]
-    //  }
-    
+    // }
+
+
 
 ]);
 
