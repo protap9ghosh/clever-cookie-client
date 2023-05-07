@@ -60,12 +60,12 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
 
-                            <p className=" ml-9"><small>New to Auth Master?</small>
+                            <p className="ml-12"><small>New to Auth Master?</small>
                                 <Link to="/register" className="label-text-alt link link-hover text-sm text-blue-500"> Please Register
                                 </Link>
                             </p>
-
-                            <small className="ml-9 mt-1 mb-5">
+                            <div className="divider my-[-2px]">OR</div>
+                            <small className="ml-12">
                                 <span>
                                     Continue With
                                     <Link onClick={googleSign} className="label-text-alt link link-hover ml-1 text-sm text-blue-500">Google</Link> &

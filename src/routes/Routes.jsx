@@ -6,6 +6,7 @@ import LoginLayout from "../layouts/LoginLayout";
 import Login from "../Component/pages/Login/Login";
 import Register from "../Component/pages/Register/Register";
 import Chef from "../layouts/Chef";
+import ErrorPage from "../Component/pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: '*',
+                element: <ErrorPage></ErrorPage>,
             }
         ]
     },
@@ -45,7 +50,7 @@ const router = createBrowserRouter([
                 element: <Chef></Chef>,
             }
         ],
-    }
+    },
     //  {
     //     path: '/',
     //     element: <Chef_bio></Chef_bio>,
@@ -58,6 +63,7 @@ const router = createBrowserRouter([
 
     //     ]
     //  }
+    
 
 ]);
 

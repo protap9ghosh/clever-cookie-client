@@ -1,21 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavigationBar from '../../../Component/pages/ErrorPage/ErrorPage';
 import { FaArrowLeft } from 'react-icons/fa';
+import notFound from '../../../assets/notFound.jpg'
 
 const ErrorPage = () => {
     return (
         <div>
-            <NavigationBar></NavigationBar>
-            <div className='text-center bg-slate-700 min-h-screen flex justify-center items-center'>
-                <div>
-                    <h1 className='text-9xl font-bold mb-5'>404</h1>
-                    <div className='text-white'>
-                        <p className='text-2xl font-semibold'>We can&apos;t find that page</p>
-                        <p className='w-96 mx-auto pt-2 pb-6'>We&apos;pe fairly sure that page used to be here but seems to have go missing. We do apologise on it&apos;s behalf.</p>
-                        <Link to="/">
-                            <button className="btn btn-outline btn-info"> <FaArrowLeft className='mr-2'/> Back To Home</button>
-                        </Link>
+            <div className="hero min-h-screen bg-indigo-200">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <img src={notFound} className="max-w-lg rounded-lg shadow-2xl" />
+                    <div className='mr-10'>
+                        <h1 className="text-5xl font-bold">Oops, page not found</h1>
+                        <p className="py-6">Sorry, the page you are looking for could not be found</p>
+                        <Link className="btn btn-outline btn-primary"><FaArrowLeft className='mr-2'/> Back To Home</Link>
                     </div>
                 </div>
             </div>

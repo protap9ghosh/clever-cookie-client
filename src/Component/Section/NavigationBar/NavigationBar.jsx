@@ -46,7 +46,7 @@ const NavigationBar = () => {
                 <div className="navbar-end">
                     {users &&
                         <div className="avatar tooltip tooltip-left" data-tip={users?.displayName}>
-                            <div className="w-14 me-3 rounded-full ">
+                            <div className="w-11 me-3 rounded-full ">
                                 <img src={users?.photoURL} />
                             </div>
                         </div>}
