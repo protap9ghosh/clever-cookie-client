@@ -44,12 +44,16 @@ const NavigationBar = () => {
 
                 <div className="navbar-center hidden lg:flex text-[17px]">
                     <NavLink to="/" className='mr-5' style={({ isActive, isPending }) => {
-                        return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#219ebc", };
+                        return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
                     }}> Home </NavLink>
 
-                    <NavLink to="/blog" style={({ isActive, isPending }) => {
-                        return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#219ebc", };
+                    <NavLink to="/blog" className='mr-5' style={({ isActive, isPending }) => {
+                        return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
                     }}> Blog </NavLink>
+
+                    <NavLink to="/About" style={({ isActive, isPending }) => {
+                        return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
+                    }}> About </NavLink>
                 </div>
 
                 <div className="navbar-end">

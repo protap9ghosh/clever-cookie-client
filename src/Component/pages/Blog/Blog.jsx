@@ -1,14 +1,22 @@
 import React from 'react';
-import NavigationBar from '../../Section/NavigationBar/NavigationBar';
+import Pdf from "react-to-pdf";
+import ReactToPdf from "react-to-pdf";
+const ref = React.createRef();
 
 const Blog = () => {
+
     return (
         <div>
-            <div>
-                <div className='min-h-screen pb-10'>
-                    <span className='flex justify-center'>
-                        <button className="btn btn-outline font-bold my-8">Download PDF</button>
+            <div className='min-h-screen' ref={ref}>
+                <div>
+                    <span className='flex justify-center pt-14 pb-8'>
+                        <ReactToPdf targetRef={ref} filename="Clever Cookie.pdf">
+                            {({ toPdf }) => (
+                                <button className='btn btn-outline btn-primary' onClick={toPdf}>Download pdf</button>
+                            )}
+                        </ReactToPdf>
                     </span>
+
                     <div className="w-7/12 mx-auto">
                         <div tabIndex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-md">
                             <div className="collapse-title text-xl font-medium bg-indigo-50">
