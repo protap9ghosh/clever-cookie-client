@@ -3,10 +3,10 @@ import { FaCalendar, FaChair, FaChalkboardTeacher, FaChartBar, FaComment, FaFace
 
 const BlogPost = () => {
     return (
-        <div className='text-center py-10 bg-sky-100'>
-            <h3 className='text-[#555555] text-3xl text-center font-semibold'>BLOG POST</h3>
-            <hr className='w-32 mt-2 mb-8 rounded mx-auto border border-amber-500' />
-            <p className='py-5'>Check our latest article, what we are talking about</p>
+        <div className='text-center py-20 bg-sky-100'>
+            <h3 className='text-[#555555] text-2xl text-center font-semibold'>BLOG POST</h3>
+            <hr className='w-24 mt-2 rounded mx-auto border border-amber-500' />
+            <p className='py-5  mb-6'>Check our latest article, what we are talking about</p>
 
             <div className='lg:flex lg:justify-center gap-6'>
 
@@ -27,7 +27,7 @@ const BlogPost = () => {
                 </div>
 
                 <div className="card w-96 bg-base-100 shadow-xl rounded-none">
-                    <figure><img src="https://rb.gy/2do5a" alt="Food" className='p-2'/></figure>
+                    <figure><img src="https://rb.gy/2do5a" alt="Food" className='p-2 w-[100%] h-[242px]'/></figure>
                     <div className="card-body">
                         <h2 className="card-title mx-auto">
                             Gallery Post Format

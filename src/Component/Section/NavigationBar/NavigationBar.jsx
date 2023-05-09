@@ -51,7 +51,11 @@ const NavigationBar = () => {
                         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
                     }}> Blog </NavLink>
 
-                    <NavLink to="/About" style={({ isActive, isPending }) => {
+                    <NavLink to="/chef" className='mr-5' style={({ isActive, isPending }) => {
+                        return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
+                    }}> Chef </NavLink>
+
+                    <NavLink to="/about" style={({ isActive, isPending }) => {
                         return { fontWeight: isActive ? "bold" : "", color: isPending ? "red" : "#0081a7", };
                     }}> About </NavLink>
                 </div>

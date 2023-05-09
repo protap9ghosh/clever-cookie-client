@@ -18,11 +18,12 @@ const Card = ({ chef }) => {
                     <p className='font-medium text-amber-500'>{chef.recipe_name}</p>
 
                     <div className="card-actions justify-between items-center mt-3">
-                        <span className='w-8 flex items-center'>
-                            <img src={like} alt="" />
-                            <p className='text-lg font-semibold ml-3'>{chef.likes}</p>
+                        <span className='w-6 flex items-center'>
+                            <img src={like} alt="" className=''/>
+                            <p className='font-semibold ml-3'>{chef.likes}</p>
+                            <span className='ml-2'>likes</span>
                         </span>
-                        <Link to="/chefDetails">
+                        <Link to={`/chef/${chef?.id}`}>
                             <div className="">
                                 <button className="btn btn-outline btn-accent">View Recipes <FaArrowRight className='ml-3' /></button>
                             </div>
