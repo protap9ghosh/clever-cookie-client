@@ -2,13 +2,19 @@ import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import like from '../assets/like.png'
+import LazyLoad from 'react-lazy-load';
 
 const Card = ({ chef }) => {
     return (
         <div>
 
             <div className="card lg:w-96 bg-base-100 shadow-xl my-4">
-                <figure><img src={chef.picture} alt="Chef" className='w-[100%] h-[390px]'/></figure>
+                <figure>
+                    <LazyLoad>
+                        <img src={chef.picture} alt="Chef" className='w-screen h-[390px]' />
+                    </LazyLoad>
+                </figure>
+
                 <div className="card-body">
                     <h2 className="card-title text-3xl">
                         {chef.name}
@@ -19,7 +25,8 @@ const Card = ({ chef }) => {
 
                     <div className="card-actions justify-between items-center mt-3">
                         <span className='w-6 flex items-center'>
-                            <img src={like} alt="" className=''/>
+                            <img src={like} alt="Likes" />
+
                             <p className='font-semibold ml-3'>{chef.likes}</p>
                             <span className='ml-2'>likes</span>
                         </span>

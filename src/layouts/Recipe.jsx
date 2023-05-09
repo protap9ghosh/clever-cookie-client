@@ -4,6 +4,7 @@ import '@smastrom/react-rating/style.css'
 import { Rating } from '@smastrom/react-rating'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import LazyLoad from 'react-lazy-load';
 
 const Recipe = ({ recipe }) => {
     const handleClick = (event) => {
@@ -16,7 +17,12 @@ const Recipe = ({ recipe }) => {
 
             <div className='flex justify-evenly mt-10'>
                 <div className="card w-96 rounded-md bg-cyan-50">
-                    <figure><img src={recipe.banner} className='w-[100%] h-[270px]' /></figure>
+                    <figure>
+                        <LazyLoad>
+                            <img src={recipe.banner} className='w-screen h-[270px]' />
+                        </LazyLoad>
+                    </figure>
+
                     <div className="card-body  text-slate-500">
                         <h2 className="card-title text-amber-600">{recipe.recipe_name}</h2>
                         <p><span className='text-[16px] text-cyan-700 font-semibold mr-3'>Ingredients:</span>{recipe.ingredients}</p>

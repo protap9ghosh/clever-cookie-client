@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Footer from '../../../Component/Section/Footer/Footer';
 import { GetContext } from '../../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 
@@ -97,7 +96,6 @@ const Register = () => {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
         </div>
     );
 };

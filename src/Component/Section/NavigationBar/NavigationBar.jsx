@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { GetContext } from '../../../providers/AuthProvider';
 import logo from '../../../assets/chef-logo.png'
+import LazyLoad from 'react-lazy-load';
 
 const NavigationBar = () => {
     const { users, userLogOut } = useContext(GetContext);
@@ -37,7 +38,9 @@ const NavigationBar = () => {
                     </div>
 
                     <div className='flex items-center h-0'>
-                        <img className='w-20' src={logo} alt="" />
+                        <LazyLoad>
+                            <img className='w-20' src={logo} alt="" />
+                        </LazyLoad>
                         <Link to="/" className="font-bold normal-case sm:text-3xl lg:text-3xl">Clever Cookie</Link>
                     </div>
                 </div>
@@ -64,7 +67,9 @@ const NavigationBar = () => {
                     {users &&
                         <div className="avatar tooltip tooltip-left" data-tip={users?.displayName}>
                             <div className="w-11 me-3 rounded-full ">
-                                <img src={users?.photoURL} />
+                                <LazyLoad>
+                                    <img src={users?.photoURL} />
+                                </LazyLoad>
                             </div>
                         </div>}
 

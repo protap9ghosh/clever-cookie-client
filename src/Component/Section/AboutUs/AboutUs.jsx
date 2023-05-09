@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
@@ -10,7 +11,9 @@ const AboutUs = () => {
 
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className='border-8 border-amber-500'>
-                        <img src="https://rb.gy/ojjih" className="lg:max-w-lg shadow-2xl" />
+                        <LazyLoad>
+                            <img src="https://rb.gy/ojjih" className="lg:max-w-lg shadow-2xl" />
+                        </LazyLoad>
                     </div>
 
                     <div>

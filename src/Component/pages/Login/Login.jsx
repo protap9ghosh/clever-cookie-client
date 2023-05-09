@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import Footer from '../../../Component/Section/Footer/Footer';
 import { GetContext } from '../../../providers/AuthProvider';
 
 const Login = () => {
@@ -76,7 +75,6 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
         </div>
     );
 };
