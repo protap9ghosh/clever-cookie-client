@@ -24,8 +24,8 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const describe = onAuthStateChanged(auth, (usersInfo) => {
-            setLoading(false)
             setUsers(usersInfo);
+            setLoading(false)
         })
         return () => {
             return describe();

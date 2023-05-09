@@ -40,8 +40,8 @@ const ChefDetails = () => {
             {
                 loading ? <Blocks
                     visible={true}
-                    height="80"
-                    width="80"
+                    height="90"
+                    width="1400"
                     ariaLabel="blocks-loading"
                     wrapperStyle={{}}
                     wrapperClass="blocks-wrapper"
@@ -89,7 +89,6 @@ const ChefDetails = () => {
                         </div>
                     </div>
             }
-
         </div>
     );
 };
