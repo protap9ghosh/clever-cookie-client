@@ -12,7 +12,7 @@ const AboutUs = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className='border-8 border-amber-500'>
                         <LazyLoad>
-                            <img src="https://rb.gy/ojjih" className="lg:max-w-lg shadow-2xl" />
+                            <img src="https://rb.gy/ojjih" alt='Chef' className="lg:max-w-lg shadow-2xl" />
                         </LazyLoad>
                     </div>
 
