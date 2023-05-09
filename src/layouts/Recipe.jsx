@@ -2,8 +2,15 @@ import React from 'react';
 import { FaRegHeart } from 'react-icons/fa';
 import '@smastrom/react-rating/style.css'
 import { Rating } from '@smastrom/react-rating'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Recipe = ({ recipe }) => {
+    const handleClick = (event) => {
+        toast.success("Successfully added favorite recipe")
+        event.currentTarget.disabled = true;
+    };
+
     return (
         <div>
 
@@ -23,7 +30,10 @@ const Recipe = ({ recipe }) => {
                                 <p className='ml-3'>{recipe.rating}</p>
                             </span>
 
-                            <button className="btn btn-sm btn-outline btn-warning"><FaRegHeart className='mr-2' /> Favorite</button>
+                            <span>
+                                <button onClick={handleClick} className="btn btn-sm btn-outline btn-warning"><FaRegHeart className='mr-2' /> Favorite</button>
+                                <ToastContainer />
+                            </span>
                         </div>
                     </div>
                 </div>

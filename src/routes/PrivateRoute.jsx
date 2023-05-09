@@ -1,16 +1,18 @@
 import React, { useContext } from 'react';
 import { GetContext } from '../providers/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
+// import { Blocks } from 'react-loader-spinner'
 
-const PrivateRoute = ({children}) => {
+const PrivateRoute = ({ children }) => {
     const { users } = useContext(GetContext);
     const location = useLocation();
+
     if (users) {
         return children;
     }
 
     return (
-        <Navigate state={{from: location}} to="/login" replace>
+        <Navigate state={{ from: location }} to="/login" replace>
             {children}
         </Navigate>
     );

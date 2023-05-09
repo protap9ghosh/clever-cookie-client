@@ -4,13 +4,19 @@ import Card from './Card';
 
 const Chef = () => {
     const [chef, setChef] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        setLoading(true);
         fetch('http://localhost:5000/chef-details')
             .then((res) => res.json())
-            .then((data) => setChef(data))
+            .then((data) => {
+                setChef(data)
+                setLoading(false);
+            })
     }, [])
 
+    
     return (
         <div>
             <div className='bg-slate-100 min-h-screen py-10'>
