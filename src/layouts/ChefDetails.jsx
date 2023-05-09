@@ -16,7 +16,7 @@ const ChefDetails = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:5000/chef-details/${id}`)
+        fetch(`https://clever-cookie-server-protap9ghosh.vercel.app/chef-details/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setChefInfo(data)
@@ -26,7 +26,7 @@ const ChefDetails = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:5000/recipe')
+        fetch('https://clever-cookie-server-protap9ghosh.vercel.app/recipe')
             .then((res) => res.json())
             .then((data) => {
                 setRecipes(data)

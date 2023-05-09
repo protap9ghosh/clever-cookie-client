@@ -8,7 +8,7 @@ const Chef = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:5000/chef-details')
+        fetch('https://clever-cookie-server-protap9ghosh.vercel.app/chef-details')
             .then((res) => res.json())
             .then((data) => {
                 setChef(data)
@@ -16,7 +16,7 @@ const Chef = () => {
             })
     }, [])
 
-    
+
     return (
         <div>
             <div className='bg-slate-100 min-h-screen py-10'>
