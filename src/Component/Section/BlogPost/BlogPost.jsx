@@ -11,7 +11,7 @@ const BlogPost = () => {
 
             <div className='lg:flex lg:justify-center gap-6'>
 
-                <div className="card w-96 bg-base-100 shadow-xl rounded-none">
+                <div className="card w-96 mx-auto bg-base-100 shadow-xl rounded-none">
                     <figure>
                         <LazyLoad>
                             <img src="https://rb.gy/7en8a" alt="Food" className='p-2 w-[100%] h-[242px]' />
@@ -31,7 +31,7 @@ const BlogPost = () => {
                     </div>
                 </div>
 
-                <div className="card w-96 bg-base-100 shadow-xl rounded-none">
+                <div className="card w-96 mt-7 mx-auto bg-base-100 shadow-xl rounded-none">
                     <figure>
                         <LazyLoad>
                             <img src="https://rb.gy/2do5a" alt="Food" className='p-2 w-[100%] h-[242px]' />
@@ -51,7 +51,7 @@ const BlogPost = () => {
                     </div>
                 </div>
 
-                <div className="card w-96 bg-base-100 shadow-xl rounded-none">
+                <div className="card w-96 mt-7 mx-auto bg-base-100 shadow-xl rounded-none">
                     <figure>
                         <LazyLoad>
                             <img src="https://rb.gy/48i7z" alt="Food" className='p-2 w-screen h-[242px]' />
