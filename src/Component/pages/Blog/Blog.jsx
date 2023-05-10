@@ -17,7 +17,7 @@ const Blog = () => {
                         </ReactToPdf>
                     </span>
 
-                    <div className="w-7/12 mx-auto">
+                    <div className="lg:w-7/12 mx-auto">
                         <div tabIndex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-md">
                             <div className="collapse-title text-xl font-medium bg-indigo-50">
                                 <p>Tell us the differences between uncontrolled and controlled components</p>
